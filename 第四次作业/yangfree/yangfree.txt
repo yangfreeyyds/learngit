@@ -1,0 +1,48 @@
+
+1. 初始化和配置：
+   - `git init`：在当前目录中初始化一个新的Git仓库。
+   - `git config --global user.name <name>`：设置全局用户名。
+   - `git config --global user.email <email>`：设置全局用户邮箱。
+   - `git config --global alias.<alias-name> <git-command>`：设置全局Git命令别名。
+
+2. 仓库操作：
+   - `git clone <repository>`：克隆（复制）一个远程仓库到本地。
+   - `git remote add <name> <url>`：将一个远程仓库添加到本地仓库。
+   - `git remote -v`：查看远程仓库的详细信息。
+   - `git pull <remote> <branch>`：从远程仓库拉取最新的更改。
+   - `git push <remote> <branch>`：将本地的更改推送到远程仓库。
+
+3. 基本操作：
+   - `git add <file>`：将文件添加到暂存区。
+   - `git add .`：将所有修改的文件添加到暂存区。
+   - `git commit -m <message>`：将暂存区的更改提交到本地仓库，并添加提交信息。
+   - `git status`：查看当前仓库的状态，包括修改、暂存和未跟踪的文件。
+   - `git log`：查看提交日志，显示所有的提交记录。
+   - `git diff`：显示工作目录中未暂存的更改。
+   - `git diff --staged`：显示已暂存的更改与最后一次提交之间的差异。
+
+4. 分支操作：
+   - `git branch`：查看所有分支的列表。
+   - `git branch <branch-name>`：创建一个新分支。
+   - `git checkout <branch-name>`：切换到指定分支。
+   - `git checkout -b <branch-name>`：创建并切换到一个新分支。
+   - `git merge <branch-name>`：将指定分支的更改合并到当前分支。
+   - `git rebase <branch-name>`：将当前分支的更改移到指定分支的顶部。
+   - `git branch -d <branch-name>`：删除指定的分支。
+
+5. 标签操作：
+   - `git tag`：列出所有标签。
+   - `git tag <tag-name>`：创建一个新标签。
+   - `git tag -a <tag-name> -m <message>`：创建一个带注释的新标签。
+   - `git show <tag-name>`：显示指定标签的详细信息。
+   - `git push --tags`：推送所有本地标签到远程仓库。
+
+6. 撤销和回退：
+   - `git reset <file>`：从暂存区中移除文件，但保留工作目录中的更改。
+   - `git reset`：将HEAD指针重置到最后一次提交
+
+。
+   - `git reset --hard <commit>`：将HEAD指针和当前分支的引用重置到指定的提交，丢弃之后的所有更改。
+   - `git revert <commit>`：创建一个新的提交，撤销指定的提交。
+   - `git checkout -- <file>`：撤销对文件的修改，将其还原为最后一次提交的状态。
+
